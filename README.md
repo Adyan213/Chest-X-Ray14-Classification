@@ -122,11 +122,11 @@ Grad-CAM was implemented from scratch using forward and backward hooks attached 
 
 For diseases with clear anatomical targets, Grad-CAM frequently highlighted clinically relevant regions: Cardiomegaly → heart silhouette, Edema → central/perihilar lung regions, Effusion → lower lung bases.
 
-![Correct Cardiomegaly prediction, heatmap tightly localized on the heart](figures/cardiomegaly_correct.png)
+![Correct Cardiomegaly prediction, heatmap tightly localized on the heart](figures/Cardiomegaly_correct.png)
 
 *Figure 1: Correct Cardiomegaly prediction (primary, unweighted model) — heatmap tightly localized on the heart, as expected.*
 
-![Correct Effusion prediction, heatmap over the lower lung field](figures/effusion.png)
+![Correct Effusion prediction, heatmap over the lower lung field](figures/Effusion.png)
 
 *Figure 2: Correct Effusion prediction (Prob 0.89) — heatmap sits over the right lower lung base, consistent with fluid accumulation, though leaning to one side rather than showing the fully bilateral pattern effusion can present with.*
 
@@ -138,7 +138,7 @@ Rather than showing only successful examples, the repository also includes repre
 
 The model fails to activate meaningfully anywhere in the image, producing an almost completely flat heatmap. This suggests not incorrect localization, but an absence of discriminative signal altogether. Notably, this differs from how the *weighted* model failed on the same case — that version activated on a support-device marking in the image corner rather than the heart. Reweighting turned a "silent" failure into a "confidently wrong" one, which is arguably a worse outcome from an interpretability standpoint even though the heatmap "does something."
 
-![Cardiomegaly false negative, flat uninformative heatmap](figures/cardiomegaly_false_negative.png)
+![Cardiomegaly false negative, flat uninformative heatmap](figures/Cardiomegaly_false_negative.png)
 
 *Figure 3: Cardiomegaly false negative (primary model) — the heatmap is flat, with no meaningful activation anywhere.*
 
@@ -148,7 +148,7 @@ For Pneumothorax, the unweighted model localizes attention to the lung periphery
 
 | Unweighted Model (correct region) | Weighted Model (shifted to mediastinum) |
 |---|---|
-| ![Pneumothorax unweighted, correctly on lateral lung periphery](figures/pneumothorax_unweighted.png) | ![Pneumothorax weighted, incorrectly on mediastinum](figures/pneumothorax_weighted.png) |
+| ![Pneumothorax unweighted, correctly on lateral lung periphery](figures/Pneumothorax_unweighted.png) | ![Pneumothorax weighted, incorrectly on mediastinum](figures/Pneumothorax_weighted.png) |
 
 *Figure 4: Pneumothorax Grad-CAM comparison — unweighted (left) vs. weighted (right).*
 
