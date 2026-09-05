@@ -1,0 +1,38 @@
+# Model checkpoints — large, regeneratable from notebooks.
+# Share via GitHub Releases or the linked Kaggle Model instead.
+*.pth
+*.pt
+*.h5
+*.ckpt
+
+# NIH ChestX-ray14 image data — ~45GB, never belongs in git.
+# See README "Dataset" section for download instructions.
+data/
+images/
+*.png.dvc
+Data_Entry_2017.csv
+
+# Jupyter
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints
+
+# Environments
+.venv/
+venv/
+env/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Kaggle / Colab artifacts
+.kaggle/
+kaggle.json

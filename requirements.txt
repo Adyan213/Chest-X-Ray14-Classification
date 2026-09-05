@@ -1,0 +1,25 @@
+# Core
+numpy>=1.24
+pandas>=2.0
+
+# Deep learning
+torch>=2.0
+torchvision>=0.15
+
+# Data handling / images
+Pillow>=9.0
+opencv-python>=4.7
+
+# Metrics & splitting
+scikit-learn>=1.2
+
+# Plotting
+matplotlib>=3.7
+
+# Notebook execution
+jupyter>=1.0
+
+# Note: exact versions used during development were determined by the
+# Kaggle notebook environment at training time. If reproducing results
+# exactly (down to minor numerical differences), consider checking the
+# Kaggle environment's `pip freeze` for pinned versions instead.
